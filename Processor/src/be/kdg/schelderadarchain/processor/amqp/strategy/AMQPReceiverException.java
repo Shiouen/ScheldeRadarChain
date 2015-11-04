@@ -1,7 +1,9 @@
 package be.kdg.schelderadarchain.processor.amqp.strategy;
 
 /**
- * Created by Olivier on 03-Nov-15.
+ * Exception class for anything concerning AMQPReceiver
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPReceiverException extends Exception {
     public AMQPReceiverException(String message) {
