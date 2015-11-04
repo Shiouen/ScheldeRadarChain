@@ -6,8 +6,8 @@
 # Package Files #
 *.jar
 # Include jars if they’re in the lib directories
-!/ScheldeRadarChain/Generator/lib/*.jar
-!/ScheldeRadarChain/Processor/lib/*.jar
+!/Generator/lib/*/*.jar
+!/Processor/lib/*/*.jar
 *.war
 *.ear
 /ScheldeRadarChain/Processor/out
