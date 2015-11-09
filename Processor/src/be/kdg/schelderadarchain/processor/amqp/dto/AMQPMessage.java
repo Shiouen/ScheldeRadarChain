@@ -1,7 +1,9 @@
 package be.kdg.schelderadarchain.processor.amqp.dto;
 
 /**
- * Created by Olivier on 04-Nov-15.
+ * This model class provides a simple way to pass on an AMQPMessage string.
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPMessage {
     private String message;

@@ -5,12 +5,17 @@
 
 # Package Files #
 *.jar
-# Include jars if they’re in the lib directories
-!/Generator/lib/*/*.jar
-!/Processor/lib/*/*.jar
 *.war
 *.ear
 /ScheldeRadarChain/Processor/out
+/ScheldeRadarChain/Generator/out
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Include jars if they’re in the lib directories
+!/Generator/lib/*/*.jar
+!/Processor/lib/*/*.jar
+
+# Ignore .idea stuffs
+.idea/

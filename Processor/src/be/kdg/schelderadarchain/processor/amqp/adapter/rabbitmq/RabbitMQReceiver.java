@@ -19,7 +19,7 @@ import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiverException;
  * This class acts as an adapter between AMQP-based RabbitMQ functionality and
  * the Schelderadarchain Processor's AMQPReceiver interface, separating both codebases.
  *
- * This class also acts as a strategy, through the AMQPReceiver's abstraction, to receive AMQP messages
+ * This class also acts as a strategy, through the AMQPReceiver interface abstraction, to receive AMQP messages
  * based on RabbitMQ's implementation.
  *
  * @author Olivier Van Aken
