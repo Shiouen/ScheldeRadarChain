@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5dbf501-30e0-4029-94c5-2761ae08c697" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java" />
-      <change type="DELETED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\service\AMQPMessageService.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\buffering\IncidentMessageBuffer.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\model\MessageType.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\adapter\RabbitMQReceiver.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/adapter/rabbitmq/RabbitMQReceiver.java" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\controller\AMQPController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/controller/AMQPReceiverController.java" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\model\AMQPMessage.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/dto/AMQPMessage.java" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\utility\AMQPConfiguration.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/utility/AMQPProperties.java" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\utility\RabbitMQReceiverConfiguration.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/utility/RabbitMQProperties.java" />
-      <change type="MOVED" beforePath="C:\Users\Olivier\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\controller\MessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPReceiver.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Message.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/res/properties/amqp.properties" afterPath="$PROJECT_DIR$/Processor/res/properties/amqp.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Processor/properties/amqp.properties" afterPath="$PROJECT_DIR$/out/production/Processor/properties/amqp.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScheldeRadarChain.iws" />
@@ -40,10 +24,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ControlledAMQPCommunicator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPCommunicator.java">
+      <file leaf-file-name="ProcessorController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncidentMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/IncidentMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PositionMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/PositionMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.28041238">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlledAMQPCommunicator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPCommunicator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
               <folding />
             </state>
@@ -184,6 +210,94 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheldeRadarChain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheldeRadarChain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheldeRadarChain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScheldeRadarChain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buffering" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,16 +586,16 @@
       <workItem from="1446718360103" duration="602000" />
       <workItem from="1446980673244" duration="147000" />
       <workItem from="1447062721601" duration="31202000" />
-      <workItem from="1447107263333" duration="3024000" />
+      <workItem from="1447107263333" duration="3268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100148000" />
+    <option name="totallyTimeSpent" value="100392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -491,10 +605,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33116037" sideWeight="0.456875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33116037" sideWeight="0.456875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -788,14 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28041238">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/AMQPReceiverException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28041238">
@@ -928,6 +1034,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33195877">
+          <caret line="1539" column="0" selection-start-line="1539" selection-start-column="0" selection-end-line="1539" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPCommunicator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -935,14 +1057,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/PositionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,18 +1068,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Scanner.java">
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/PositionMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33195877">
-          <caret line="1539" column="0" selection-start-line="1539" selection-start-column="0" selection-end-line="1539" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPCommunicator.java">
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28041238">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding />
         </state>
       </provider>
