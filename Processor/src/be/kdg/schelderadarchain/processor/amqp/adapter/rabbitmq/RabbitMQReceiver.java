@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.processor.amqp.adapter;
+package be.kdg.schelderadarchain.processor.amqp.adapter.rabbitmq;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -11,10 +11,9 @@ import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.AMQP.BasicProperties;
 
-import be.kdg.schelderadarchain.processor.amqp.model.AMQPMessage;
+import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
 import be.kdg.schelderadarchain.processor.amqp.strategy.ControlledAMQPReceiver;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiverException;
-import be.kdg.schelderadarchain.processor.amqp.utility.RabbitMQReceiverConfiguration;
 
 /**
  * This class acts as an adapter between AMQP-based RabbitMQ functionality and
@@ -26,15 +25,15 @@ import be.kdg.schelderadarchain.processor.amqp.utility.RabbitMQReceiverConfigura
  * @author Olivier Van Aken
  */
 public class RabbitMQReceiver extends ControlledAMQPReceiver {
-    private final String host;
-    private final String queue;
+    private String host;
+    private String queue;
 
     private final Channel channel;
     private final Connection connection;
 
-    public RabbitMQReceiver() throws AMQPReceiverException {
-        this.host = RabbitMQReceiverConfiguration.getHost();
-        this.queue = RabbitMQReceiverConfiguration.getQueue();
+    public RabbitMQReceiver(String host, String queue) throws AMQPReceiverException {
+        this.host = host;
+        this.queue = queue;
 
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost(this.host);
@@ -87,7 +86,7 @@ public class RabbitMQReceiver extends ControlledAMQPReceiver {
     public void open() throws AMQPReceiverException {
         try {
             // make sure the queue exists
-            channel.queueDeclare(this.queue, false, false, false, null);
+            this.channel.queueDeclare(this.queue, false, false, false, null);
         } catch (IOException e) {
             String msg = "Something went wrong trying to declare the queue for channel=%s with RabbitMQ host=%s";
             msg = String.format(msg, this.host, this.channel);

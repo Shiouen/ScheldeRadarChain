@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.processor.amqp.model;
+package be.kdg.schelderadarchain.processor.amqp.dto;
 
 /**
  * Created by Olivier on 04-Nov-15.
@@ -6,9 +6,7 @@ package be.kdg.schelderadarchain.processor.amqp.model;
 public class AMQPMessage {
     private String message;
 
-    public AMQPMessage(String message) {
-        this.message = message;
-    }
+    public AMQPMessage(String message) { this.message = message; }
 
     public String getMessage() { return this.message; }
 

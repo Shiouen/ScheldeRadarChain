@@ -6,7 +6,7 @@ import java.util.Properties;
 /**
  * Created by Olivier on 04-Nov-15.
  */
-public class AMQPConfiguration {
+public class AMQPProperties {
     protected final static String PROPERTY_FILE = "properties/amqp.properties";
     protected final static Properties PROPERTIES = new Properties();
 
