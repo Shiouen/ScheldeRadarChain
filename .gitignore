@@ -16,6 +16,3 @@ hs_err_pid*
 # Include jars if they’re in the lib directories
 !/Generator/lib/*/*.jar
 !/Processor/lib/*/*.jar
-
-# Ignore .idea stuffs
-.idea/
