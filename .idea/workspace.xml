@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c39107-a6b2-4cbe-8658-2277e6034c38" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/Buffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/properties/BufferProperties.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferSchedule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferScheduleFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Processor/res/properties/buffer.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Processor/properties/buffer.properties" />
+      <change type="DELETED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\buffering\MessageBuffer.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\utility\AMQPProperties.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/properties/AMQPProperties.java" />
       <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\amqp\utility\RabbitMQProperties.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/properties/RabbitMQProperties.java" />
-      <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\buffering\MessageBuffer.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java" />
     </list>
     <ignored path="ScheldeRadarChain.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -778,12 +785,12 @@
       <workItem from="1447107263333" duration="3024000" />
       <workItem from="1447112773588" duration="31000" />
       <workItem from="1447112806863" duration="83000" />
-      <workItem from="1447112900786" duration="11747000" />
+      <workItem from="1447112900786" duration="11825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112009000" />
+    <option name="totallyTimeSpent" value="112087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
