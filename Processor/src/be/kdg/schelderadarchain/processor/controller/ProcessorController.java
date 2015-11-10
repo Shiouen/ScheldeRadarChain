@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 import be.kdg.schelderadarchain.processor.amqp.adapter.rabbitmq.RabbitMQReceiver;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiverException;
-import be.kdg.schelderadarchain.processor.amqp.utility.RabbitMQProperties;
-import be.kdg.schelderadarchain.processor.buffering.MessageBuffer;
+import be.kdg.schelderadarchain.processor.amqp.properties.RabbitMQProperties;
+import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
  * Created by Olivier on 03-Nov-15.
@@ -35,24 +35,24 @@ public class ProcessorController {
         }
     }
 
-    public void openQueues() {
+    public void connectCommunicators() {
         this.incidentMessageController.startReceiving();
         this.positionMessageController.startReceiving();
     }
 
-    public void closeQueues() {
+    public void disconnectCommunicators() {
         this.incidentMessageController.stopReceiving();
         this.positionMessageController.stopReceiving();
     }
 
     public static void main(String[] args) {
         ProcessorController processorController = new ProcessorController();
-        processorController.openQueues();
+        processorController.connectCommunicators();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Press any key to exit.");
+        System.out.print("Press any key to exit.");
         scanner.nextLine();
 
-        processorController.closeQueues();
+        processorController.disconnectCommunicators();
     }
 }

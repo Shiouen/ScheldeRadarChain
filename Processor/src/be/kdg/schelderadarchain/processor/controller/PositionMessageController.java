@@ -5,7 +5,7 @@ import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
 import be.kdg.schelderadarchain.processor.model.PositionMessage;
 import be.kdg.schelderadarchain.processor.service.MessageService;
 import be.kdg.schelderadarchain.processor.amqp.strategy.ControlledAMQPReceiver;
-import be.kdg.schelderadarchain.processor.buffering.MessageBuffer;
+import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
  * This class is an implementation of an AMQPController for PositionMessages.

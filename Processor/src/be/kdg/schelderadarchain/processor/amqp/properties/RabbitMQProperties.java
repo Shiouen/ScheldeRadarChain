@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.processor.amqp.utility;
+package be.kdg.schelderadarchain.processor.amqp.properties;
 
 public class RabbitMQProperties extends AMQPProperties {
     private static final String HOST;
