@@ -1,0 +1,19 @@
+<?xml version="1.0"?><!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+        "http://castor.org/mapping.dtd">
+<mapping>
+    <class name="be.kdg.schelderadarchain.generator.dom.PositionMessage">
+        <map-to xml="position-message" />
+        <field name="shipId" type="java.lang.String">
+            <bind-xml name="ship-id" node="element"/>
+        </field>
+        <field name="stationId" type="java.lang.String">
+            <bind-xml name="station-id" node="element"/>
+        </field>
+        <field name="distanceToLoadingDock" type="java.lang.String">
+            <bind-xml name="distance-to-loading-dock" node="element"/>
+        </field>
+        <field name="timestamp" type="java.util.Date">
+            <bind-xml name="timestamp" node="element"/>
+        </field>
+    </class>
+</mapping>
