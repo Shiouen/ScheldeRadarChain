@@ -24,7 +24,7 @@ public class PositionController extends AMQPReceiverController {
 
     @Override
     public void receive(AMQPMessage amqpMessage) {
-        Position position = ModelMapper.mapAmqpToPosition(amqpMessage);
+        Position position = (Position) ModelMapper.map(amqpMessage, Position.class);
         this.amqpMessageService.add(position);
         this.messageBuffer.buffer(position);
     }

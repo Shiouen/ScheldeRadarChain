@@ -21,12 +21,11 @@ import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
  * Created by Olivier on 09/11/2015.
  */
 public final class ModelMapper {
-    public static Position mapAmqpToPosition(AMQPMessage amqpMessage) {
-        Position message;
+    public static Object map(AMQPMessage amqpMessage, Class<?> target) {
         Reader reader = new StringReader(amqpMessage.getMessage());
 
         try {
-            message = (Position) Unmarshaller.unmarshal(Position.class, reader);
+            return Unmarshaller.unmarshal(target, reader);
         } catch (MarshalException e) {
             // lol
             return null;
@@ -34,42 +33,6 @@ public final class ModelMapper {
             // lol
             return null;
         }
-
-        return message;
-    }
-
-    public static Position map(AMQPMessage amqpMessage) {
-        Position message;
-        Reader reader = new StringReader(amqpMessage.getMessage());
-
-        try {
-            message = (Position) Unmarshaller.unmarshal(Position.class, reader);
-        } catch (MarshalException e) {
-            // lol
-            return null;
-        } catch (ValidationException e) {
-            // lol
-            return null;
-        }
-
-        return message;
-    }
-
-    public static Incident mapAmqpToIncident(AMQPMessage amqpMessage) {
-        Incident message;
-        Reader reader = new StringReader(amqpMessage.getMessage());
-
-        try {
-            message = (Incident) Unmarshaller.unmarshal(Incident.class, reader);
-        } catch (MarshalException e) {
-            // lol
-            return null;
-        } catch (ValidationException e) {
-            // lol
-            return null;
-        }
-
-        return message;
     }
 
     public static Ship map(ShipServiceShip msg) {

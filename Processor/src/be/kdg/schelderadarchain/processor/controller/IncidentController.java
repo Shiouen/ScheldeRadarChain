@@ -24,7 +24,7 @@ public class IncidentController extends AMQPReceiverController {
 
     @Override
     public void receive(AMQPMessage amqpMessage) {
-        Incident incident = ModelMapper.mapAmqpToIncident(amqpMessage);
+        Incident incident = (Incident) ModelMapper.map(amqpMessage, Incident.class);
         this.amqpMessageService.add(incident);
         this.messageBuffer.buffer(incident);
     }
