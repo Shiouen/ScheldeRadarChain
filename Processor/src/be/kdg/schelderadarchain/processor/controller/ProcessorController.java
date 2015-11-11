@@ -12,8 +12,8 @@ import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
  * Created by Olivier on 03-Nov-15.
  */
 public class ProcessorController {
-    private IncidentMessageController incidentMessageController;
-    private PositionMessageController positionMessageController;
+    private IncidentController incidentController;
+    private PositionController positionController;
 
     private MessageBuffer messageBuffer;
     private ShipCache shipCache;
@@ -27,11 +27,11 @@ public class ProcessorController {
         try {
             // incident queue receiver
             receiver = new RabbitMQReceiver(RabbitMQProperties.getHost(), RabbitMQProperties.getReceiverIncidentQueue());
-            this.incidentMessageController= new IncidentMessageController(receiver, this.messageBuffer);
+            this.incidentController = new IncidentController(receiver, this.messageBuffer);
 
             // position queue receiver
             receiver = new RabbitMQReceiver(RabbitMQProperties.getHost(), RabbitMQProperties.getReceiverPositionQueue());
-            this.positionMessageController = new PositionMessageController(receiver, this.messageBuffer);
+            this.positionController = new PositionController(receiver, this.messageBuffer);
         } catch (AMQPReceiverException e) {
             System.out.println(e.getMessage());
             System.exit(1);
@@ -39,13 +39,13 @@ public class ProcessorController {
     }
 
     public void connectCommunicators() {
-        this.incidentMessageController.startReceiving();
-        this.positionMessageController.startReceiving();
+        this.incidentController.startReceiving();
+        this.positionController.startReceiving();
     }
 
     public void disconnectCommunicators() {
-        this.incidentMessageController.stopReceiving();
-        this.positionMessageController.stopReceiving();
+        this.incidentController.stopReceiving();
+        this.positionController.stopReceiving();
     }
 
     public static void main(String[] args) {

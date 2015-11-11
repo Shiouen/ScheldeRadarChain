@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c39107-a6b2-4cbe-8658-2277e6034c38" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Development\Repositories\ScheldeRadarChain\.idea\libraries\incidentservice_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\controller\ModelMapper.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/Buffer.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/Buffer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/properties/BufferProperties.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/properties/BufferProperties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferSchedule.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferSchedule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferScheduleFactory.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferScheduleFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/Generator.iml" afterPath="$PROJECT_DIR$/Generator/Generator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/Processor.iml" afterPath="$PROJECT_DIR$/Processor/Processor.iml" />
+      <change type="MODIFICATION" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\model\mapping\ModelMapper.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/res/properties/buffer.properties" afterPath="$PROJECT_DIR$/Processor/res/properties/buffer.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Processor/properties/buffer.properties" afterPath="$PROJECT_DIR$/out/production/Processor/properties/buffer.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\controller\IncidentMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentController.java" />
+      <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\controller\PositionMessageController.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionController.java" />
+      <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\model\IncidentMessage.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Incident.java" />
+      <change type="MOVED" beforePath="D:\Development\Repositories\ScheldeRadarChain\Processor\src\be\kdg\schelderadarchain\processor\model\PositionMessage.java" afterPath="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Position.java" />
     </list>
     <ignored path="ScheldeRadarChain.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +31,52 @@
     <favorites_list name="ScheldeRadarChain" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ShipCache.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageBuffer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.427256">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipServiceReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,9 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/dto/AMQPMessage.java" />
-        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Message.java" />
-        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/adapter/rabbitmq/RabbitMQReceiver.java" />
@@ -100,16 +136,19 @@
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Ship.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Mapping/ModelMapper.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/utility/StringUtils.java" />
-        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/dto/ShipServiceMessage.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/dto/ShipServiceCargo.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/dto/ShipServiceShip.java" />
-        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferSchedule.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferScheduleFactory.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java" />
         <option value="$PROJECT_DIR$/Processor/res/properties/buffer.properties" />
+        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentController.java" />
+        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java" />
+        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Incident.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java" />
+        <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java" />
       </list>
     </option>
   </component>
@@ -190,28 +229,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="buffer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,12 +569,12 @@
       <workItem from="1447112806863" duration="83000" />
       <workItem from="1447112900786" duration="11825000" />
       <workItem from="1447171456427" duration="289000" />
-      <workItem from="1447173391664" duration="24988000" />
+      <workItem from="1447173391664" duration="28749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137364000" />
+    <option name="totallyTimeSpent" value="141125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -567,7 +584,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252376" sideWeight="0.4765625" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970433" sideWeight="0.55364585" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970433" sideWeight="0.55572915" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -576,12 +593,12 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.48333332" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.48125" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970433" sideWeight="0.44635418" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970433" sideWeight="0.44427082" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -604,13 +621,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java</url>
-          <line>40</line>
+          <url>file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java</url>
+          <line>53</line>
           <properties />
-          <option name="timeStamp" value="43" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -633,7 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java">
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
@@ -738,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6515464">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/properties/AMQPProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25046042">
@@ -788,14 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/Processor/lib/rabbitmq/rabbitmq-client.jar!/com/rabbitmq/client/impl/StrictExceptionHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -822,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Processor/lib/rabbitmq/rabbitmq-client.jar!/com/rabbitmq/client/impl/ConsumerDispatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35077518">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/properties/BufferProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.839779">
@@ -840,58 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/IncidentMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/PositionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Cargo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42079207">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11221122">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05610561">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30858085">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42079207">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -934,48 +880,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.430693">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80363035">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/schedule/BufferSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5231023">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14026402">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
-          <folding>
-            <element signature="e#2089#2090#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -988,15 +898,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/Buffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15653776">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/dto/AMQPMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22405271">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/IncidentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39209226">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/PositionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5601318">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Cargo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/Incident.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5635359">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/model/mapping/ModelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Processor/lib/rabbitmq/rabbitmq-client.jar!/com/rabbitmq/client/impl/ConsumerDispatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8766114">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/adapter/ShipServiceReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/MessageBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.427256">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -12,29 +12,35 @@ import be.kdg.schelderadarchain.processor.model.Ship;
 import be.kdg.schelderadarchain.processor.model.mapping.ModelMapper;
 
 public final class ShipServiceReceiver {
-    private boolean success;
     private int attempts;
+    private boolean error;
+    private boolean unavailable;
 
     private final ShipServiceProxy shipService;
 
     public ShipServiceReceiver() {
-        this.success = false;
         this.attempts = BufferProperties.getShipServiceReceiverAttempts();
+
+        this.error = false;
+        this.unavailable = false;
 
         this.shipService = new ShipServiceProxy();
     }
 
-    public boolean getSuccess() { return this.success; }
+    public boolean isSuccessful() { return !(this.hasError() || this.isUnavailable()); }
+    public boolean hasError() { return this.error; }
+    public boolean isUnavailable() { return this.unavailable; }
 
     public final Ship receive(Integer shipId) {
         String imo = shipId.toString();
         String baseUrl = "www.services4se3.com/shipservice";
         String url = String.format("%s/%s", baseUrl, imo);
 
-        Ship ship = null;
+        // receive ship info from ShipService
+        Ship ship = receive(url);
 
         // while no successful connection and positive number of attempts left
-        while (!this.success && this.attempts > 0) {
+        while (this.isUnavailable() && this.attempts > 0) {
             ship = receive(url);
         }
 
@@ -50,20 +56,19 @@ public final class ShipServiceReceiver {
         try {
             String json = shipService.get(url);
             shipServiceShip = objectMapper.readValue(json, ShipServiceShip.class);
-            ship = ModelMapper.map(shipServiceShip);
-
-            // if no exception occurred
-            this.success = true;
+            this.unavailable = false;
         } catch (IOException e) {
             // json and fake failed communication
-            --this.attempts;
-            this.success = false;
+            this.attempts--;
+            this.unavailable = true;
         }
 
-        // if JSON ShipService error received
-        boolean shipServiceError = shipServiceShip.getError() != null;
-        if (this.success && shipServiceError) {
-            this.success = false;
+        if (shipServiceShip.getError() != null) {
+            this.error = true;
+        }
+
+        if (this.isSuccessful()) {
+            ship = ModelMapper.map(shipServiceShip);
         }
 
         return ship;

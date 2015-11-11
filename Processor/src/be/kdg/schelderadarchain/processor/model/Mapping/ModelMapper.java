@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceCargo;
 import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceShip;
 import be.kdg.schelderadarchain.processor.model.Cargo;
-import be.kdg.schelderadarchain.processor.model.IncidentMessage;
-import be.kdg.schelderadarchain.processor.model.PositionMessage;
+import be.kdg.schelderadarchain.processor.model.Incident;
+import be.kdg.schelderadarchain.processor.model.Position;
 import be.kdg.schelderadarchain.processor.model.Ship;
 import be.kdg.schelderadarchain.processor.utility.StringUtils;
 import org.exolab.castor.xml.MarshalException;
@@ -21,12 +21,12 @@ import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
  * Created by Olivier on 09/11/2015.
  */
 public final class ModelMapper {
-    public static PositionMessage mapAmqpToPosition(AMQPMessage amqpMessage) {
-        PositionMessage message;
+    public static Position mapAmqpToPosition(AMQPMessage amqpMessage) {
+        Position message;
         Reader reader = new StringReader(amqpMessage.getMessage());
 
         try {
-            message = (PositionMessage) Unmarshaller.unmarshal(PositionMessage.class, reader);
+            message = (Position) Unmarshaller.unmarshal(Position.class, reader);
         } catch (MarshalException e) {
             // lol
             return null;
@@ -38,12 +38,29 @@ public final class ModelMapper {
         return message;
     }
 
-    public static IncidentMessage mapAmqpToIncident(AMQPMessage amqpMessage) {
-        IncidentMessage message;
+    public static Position map(AMQPMessage amqpMessage) {
+        Position message;
         Reader reader = new StringReader(amqpMessage.getMessage());
 
         try {
-            message = (IncidentMessage) Unmarshaller.unmarshal(IncidentMessage.class, reader);
+            message = (Position) Unmarshaller.unmarshal(Position.class, reader);
+        } catch (MarshalException e) {
+            // lol
+            return null;
+        } catch (ValidationException e) {
+            // lol
+            return null;
+        }
+
+        return message;
+    }
+
+    public static Incident mapAmqpToIncident(AMQPMessage amqpMessage) {
+        Incident message;
+        Reader reader = new StringReader(amqpMessage.getMessage());
+
+        try {
+            message = (Incident) Unmarshaller.unmarshal(Incident.class, reader);
         } catch (MarshalException e) {
             // lol
             return null;

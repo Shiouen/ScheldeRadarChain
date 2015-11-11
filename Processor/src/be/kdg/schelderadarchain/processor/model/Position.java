@@ -12,12 +12,12 @@ import java.sql.Timestamp;
 /**
  * Created by Olivier on 09/11/2015.
  */
-public class PositionMessage extends Message {
+public class Position extends Message {
     private int distanceToLoadingDock;
     private String stationId;
     private Timestamp timestamp;
 
-    public PositionMessage() { }
+    public Position() { }
 
     public int getDistanceToLoadingDock() { return this.distanceToLoadingDock; }
     public String getStationId() { return this.stationId; }
@@ -31,7 +31,7 @@ public class PositionMessage extends Message {
 
     @Override
     public String toString() {
-        String s = "PositionMessage {\n\tshipId : '%s'\n\tdistanceToLoadingDock : '%s'\n\tstationId : '%s'\n\ttimestamp : '%s'\n};";
+        String s = "Position {\n\tshipId : '%s'\n\tdistanceToLoadingDock : '%s'\n\tstationId : '%s'\n\ttimestamp : '%s'\n};";
         return String.format(s, this.shipId, this.distanceToLoadingDock, this.stationId, this.timestamp);
     }
 }

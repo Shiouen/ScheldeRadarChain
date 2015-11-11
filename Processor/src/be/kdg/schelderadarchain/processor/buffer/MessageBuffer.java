@@ -49,7 +49,8 @@ public class MessageBuffer implements Buffer<Integer, Message> {
                 ShipServiceReceiver receiver = new ShipServiceReceiver();
                 Ship ship = receiver.receive(shipId);
 
-                if (receiver.getSuccess()) {
+                // if receiver communication successful > buffer ship
+                if (receiver.isSuccessful()) {
                     this.cache.buffer(ship);
                 }
             }
