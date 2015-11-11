@@ -1,13 +1,6 @@
 package be.kdg.schelderadarchain.processor.model;
 
-import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.xml.ValidationException;
-
-import java.io.Reader;
-import java.io.StringReader;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  * Created by Olivier on 09/11/2015.
@@ -15,19 +8,19 @@ import java.sql.Timestamp;
 public class Position extends Message {
     private int distanceToLoadingDock;
     private String stationId;
-    private Timestamp timestamp;
+    private LocalDateTime timestamp;
 
     public Position() { }
 
     public int getDistanceToLoadingDock() { return this.distanceToLoadingDock; }
     public String getStationId() { return this.stationId; }
-    public Timestamp getTimestamp() { return this.timestamp; }
+    public LocalDateTime getTimestamp() { return this.timestamp; }
 
     public void setDistanceToLoadingDock(int distanceToLoadingDock) {
         this.distanceToLoadingDock = distanceToLoadingDock;
     }
     public void setStationId(String stationId) { this.stationId = stationId; }
-    public void setTimestamp(Timestamp timestamp) { this.timestamp = timestamp; }
+    public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
 
     @Override
     public String toString() {

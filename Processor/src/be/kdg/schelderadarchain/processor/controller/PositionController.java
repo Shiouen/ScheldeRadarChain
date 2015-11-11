@@ -3,6 +3,7 @@ package be.kdg.schelderadarchain.processor.controller;
 import be.kdg.schelderadarchain.processor.amqp.controller.AMQPReceiverController;
 import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
 import be.kdg.schelderadarchain.processor.eta.controller.EtaController;
+import be.kdg.schelderadarchain.processor.eta.model.Eta;
 import be.kdg.schelderadarchain.processor.eta.properties.EtaProperties;
 import be.kdg.schelderadarchain.processor.model.mapping.ModelMapper;
 import be.kdg.schelderadarchain.processor.model.Position;
@@ -10,8 +11,6 @@ import be.kdg.schelderadarchain.processor.service.MessageService;
 import be.kdg.schelderadarchain.processor.amqp.strategy.ControlledAMQPReceiver;
 import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
-import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,9 +41,9 @@ public class PositionController extends AMQPReceiverController {
                 .stream().filter(Position.class::isInstance).map(Position.class::cast)
                 .collect(Collectors.toList());
 
-        Timestamp timestamp = this.etaController.eta(positions);
-        if (timestamp != null) {
-            System.out.println(timestamp.getTime());
+        Eta eta = this.etaController.eta(positions);
+        if (eta != null) {
+            System.out.println(eta);
         }
     }
 }

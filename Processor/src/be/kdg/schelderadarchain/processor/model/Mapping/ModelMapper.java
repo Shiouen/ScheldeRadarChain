@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceCargo;
 import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceShip;
 import be.kdg.schelderadarchain.processor.model.Cargo;
-import be.kdg.schelderadarchain.processor.model.Incident;
-import be.kdg.schelderadarchain.processor.model.Position;
 import be.kdg.schelderadarchain.processor.model.Ship;
 import be.kdg.schelderadarchain.processor.utility.StringUtils;
 import org.exolab.castor.xml.MarshalException;

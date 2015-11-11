@@ -3,6 +3,7 @@ package be.kdg.schelderadarchain.processor.eta.controller;
 import java.sql.Timestamp;
 import java.util.List;
 
+import be.kdg.schelderadarchain.processor.eta.model.Eta;
 import be.kdg.schelderadarchain.processor.eta.strategy.calculation.EtaCalculationMethod;
 import be.kdg.schelderadarchain.processor.eta.strategy.trigger.EtaTrigger;
 import be.kdg.schelderadarchain.processor.model.Position;
@@ -19,7 +20,7 @@ public class EtaController {
         this.trigger = trigger;
     }
 
-    public Timestamp eta(List<Position> positions) {
+    public Eta eta(List<Position> positions) {
         if (trigger.isTriggeredBy(positions)) {
             return this.method.calculateEta(positions);
         }
