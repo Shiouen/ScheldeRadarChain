@@ -2,6 +2,7 @@ package be.kdg.schelderadarchain.processor.controller;
 
 import be.kdg.schelderadarchain.processor.amqp.controller.AMQPReceiverController;
 import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
+import be.kdg.schelderadarchain.processor.model.mapping.ModelMapper;
 import be.kdg.schelderadarchain.processor.model.PositionMessage;
 import be.kdg.schelderadarchain.processor.service.MessageService;
 import be.kdg.schelderadarchain.processor.amqp.strategy.ControlledAMQPReceiver;

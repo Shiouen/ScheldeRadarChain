@@ -18,6 +18,7 @@ public class BufferSchedule extends TimerTask {
 
     @Override
     public void run() {
+        System.out.println("yo");
         this.timer.cancel();
         this.buffer.clear(this.key);
     }

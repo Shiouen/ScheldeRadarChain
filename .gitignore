@@ -19,17 +19,17 @@ hs_err_pid*
 
 # INTELLIJ
 # User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
-# .idea/shelf
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf
 
 # Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
 
 ## File-based project format:
 *.ipr

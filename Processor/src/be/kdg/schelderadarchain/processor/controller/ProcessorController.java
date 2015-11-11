@@ -5,6 +5,7 @@ import java.util.Scanner;
 import be.kdg.schelderadarchain.processor.amqp.adapter.rabbitmq.RabbitMQReceiver;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiverException;
 import be.kdg.schelderadarchain.processor.amqp.properties.RabbitMQProperties;
+import be.kdg.schelderadarchain.processor.buffer.ShipCache;
 import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
@@ -15,11 +16,13 @@ public class ProcessorController {
     private PositionMessageController positionMessageController;
 
     private MessageBuffer messageBuffer;
+    private ShipCache shipCache;
 
     public ProcessorController() {
         RabbitMQReceiver receiver;
 
-        this.messageBuffer = new MessageBuffer();
+        this.shipCache = new ShipCache();
+        this.messageBuffer = new MessageBuffer(this.shipCache);
 
         try {
             // incident queue receiver
@@ -31,7 +34,7 @@ public class ProcessorController {
             this.positionMessageController = new PositionMessageController(receiver, this.messageBuffer);
         } catch (AMQPReceiverException e) {
             System.out.println(e.getMessage());
-            return; // end program
+            System.exit(1);
         }
     }
 

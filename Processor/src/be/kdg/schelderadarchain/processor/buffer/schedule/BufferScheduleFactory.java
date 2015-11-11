@@ -4,19 +4,16 @@ import java.util.HashMap;
 import java.util.Timer;
 
 import be.kdg.schelderadarchain.processor.buffer.Buffer;
-import be.kdg.schelderadarchain.processor.buffer.properties.BufferProperties;
 
 public final class BufferScheduleFactory {
-    private final static HashMap<Object, BufferSchedule> schedules;
+    private final HashMap<Object, BufferSchedule> schedules;
 
-    static {
-        schedules = new HashMap<>();
+    public BufferScheduleFactory() {
+        this.schedules = new HashMap<>();
     }
 
-    private BufferScheduleFactory() { }
-
-    public final static void schedule(Buffer buffer, Object key) {
-        BufferSchedule schedule = schedules.get(key);
+    public final void schedule(Buffer buffer, Object key, Integer duration) {
+        BufferSchedule schedule = this.schedules.get(key);
         if (schedule != null) {
             schedule.cancel();
         }
@@ -24,7 +21,7 @@ public final class BufferScheduleFactory {
         Timer timer = new Timer();
         schedule = new BufferSchedule(buffer, key, timer);
 
-        schedules.put(key, schedule);
-        timer.schedule(new BufferSchedule(buffer, key, timer), BufferProperties.getBufferDuration());
+        this.schedules.put(key, schedule);
+        timer.schedule(new BufferSchedule(buffer, key, timer), duration);
     }
 }
