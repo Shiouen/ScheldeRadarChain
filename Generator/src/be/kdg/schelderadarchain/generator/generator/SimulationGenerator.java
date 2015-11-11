@@ -21,19 +21,21 @@ public class SimulationGenerator extends BaseGenerator implements IncidentHandle
     private final int INCIDENT_FREQUENCY = 20;
     private final String SEPARATOR = ";";
     private final String INCIDENT_URL = "www.services4se3.com/incidentservice/simulate/";
+    private final int BEGIN_INDEX = 0;
+    private final String ROUTEFILE_FOLDER = "routes";
 
     private List<String> shipIds;
 
     @Override
     public void start() {
-        this.shipIds = this.getShipIds("routes");
+        this.shipIds = this.readShipIds(this.ROUTEFILE_FOLDER);
         String randomShipId = shipIds.get(random.nextInt(shipIds.size()));
-        new FrequencyTimerTask(this, randomShipId, this.INCIDENT_FREQUENCY).run();
         this.positionMessages.addAll(RouteFileReader.readPositionMessagesFromCsv(randomShipId, this.SEPARATOR));
+        new SimulationTimerTask(this, randomShipId, this.INCIDENT_FREQUENCY).run();
         super.start();
     }
 
-    public ArrayList<String> getShipIds(String folderName){
+    public ArrayList<String> readShipIds(String folderName){
         ArrayList<String> ids = new ArrayList<>();
         try {
             File folder = new File(Thread.currentThread().getContextClassLoader().getResource(folderName).toURI());
@@ -41,7 +43,7 @@ public class SimulationGenerator extends BaseGenerator implements IncidentHandle
                 if (file.isFile()){
                     String shipId = file.getName();
                     int index = shipId.indexOf(".");
-                    ids.add(shipId.substring(0, index));
+                    ids.add(shipId.substring(this.BEGIN_INDEX, index));
                 }
             }
         } catch (URISyntaxException e) {

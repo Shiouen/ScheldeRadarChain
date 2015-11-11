@@ -22,7 +22,8 @@ public class RouteFileReader {
             bufferedReader = new BufferedReader(new InputStreamReader(Thread.currentThread().getContextClassLoader().getResourceAsStream("routes/1234567.csv")));
             while ((line = bufferedReader.readLine()) != null){
                 String[] csvLine = line.split(separator);
-                positionMessages.add(new PositionMessage(shipId, csvLine[0], csvLine[1], csvLine[2]));
+                PositionMessage positionMessage = new PositionMessage(shipId, csvLine[0], csvLine[1], csvLine[2]);
+                positionMessages.add(positionMessage);
             }
         } catch (IOException e) {
             throw new UtilityException("Error reading the csv file", e);

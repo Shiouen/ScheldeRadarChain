@@ -1,6 +1,12 @@
 package be.kdg.schelderadarchain.generator.generator;
 
+import be.kdg.schelderadarchain.generator.dom.LoadSchedule;
 import be.kdg.schelderadarchain.generator.dom.PositionMessage;
+
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -12,10 +18,12 @@ public class RandomLoadGenerator extends BaseGenerator {
     private final int MAX_SHIP_ID = 9999999;
     private final int MAX_DISTANCE_TO_LOADING_DOCK = 80000;
     private final int LIST_SIZE = 10;
-    private String[] shipIds;
-    private String[] centraleIds;
+    private final int NUMBER_OF_POSITION_MESSAGES = 30;
+    private final String FREQUENCY = "3000";
+    private final String[] shipIds = new String[LIST_SIZE];
+    private final String[] centraleIds = new String[] {"Amsterdam","Delfzijl","Eemshaven","Hengelo","Meppel","Moerdijk","Rotterdam","Terneuzen","Veghel","Vlissingen"};
 
-    public RandomLoadGenerator(){
+    public RandomLoadGenerator() {
         super();
         this.init();
     }
@@ -25,20 +33,21 @@ public class RandomLoadGenerator extends BaseGenerator {
         super.start();
     }
 
-    public PositionMessage generatePositionMessage(){
+    public PositionMessage generateRandomPositionMessage(){
         String shipId = shipIds[random.nextInt(this.LIST_SIZE)];
         String centraleId = centraleIds[random.nextInt(this.LIST_SIZE)];
         String distanceToLoadingDock = Integer.toString(random.nextInt(this.MAX_DISTANCE_TO_LOADING_DOCK));
-        PositionMessage positionMessage = new PositionMessage(shipId, "", centraleId, distanceToLoadingDock);
-
-        return null;
+        PositionMessage positionMessage = new PositionMessage(shipId, this.FREQUENCY, centraleId, distanceToLoadingDock);
+        return positionMessage;
     }
 
     private void init(){
-        shipIds = new String[LIST_SIZE];
         for(String shipId : shipIds){
             shipId = Integer.toString(random.nextInt(this.MAX_SHIP_ID - this.MIN_SHIP_ID) + this.MIN_SHIP_ID);
         }
-        centraleIds = new String[] {"Amsterdam","Delfzijl","Eemshaven","Hengelo","Meppel","Moerdijk","Rotterdam","Terneuzen","Veghel","Vlissingen"};
+        for (int i = 0; i < this.NUMBER_OF_POSITION_MESSAGES; i++) {
+            PositionMessage positionMessage = this.generateRandomPositionMessage();
+            this.positionMessages.add(positionMessage);
+        }
     }
 }

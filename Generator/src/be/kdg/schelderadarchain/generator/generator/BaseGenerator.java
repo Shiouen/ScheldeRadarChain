@@ -32,7 +32,7 @@ public abstract class BaseGenerator implements Thread.UncaughtExceptionHandler {
     }
 
     @Override
-    public void uncaughtException(Thread t, Throwable e) {
+    public final void uncaughtException(Thread t, Throwable e) {
         throw new GeneratorException("Unexpected error in position loop", e);
     }
 
