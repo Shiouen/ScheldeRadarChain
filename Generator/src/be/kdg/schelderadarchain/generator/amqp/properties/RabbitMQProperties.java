@@ -1,8 +1,11 @@
 package be.kdg.schelderadarchain.generator.amqp.properties;
 
 /**
- * Created by Cas on 11/11/2015.
+ * This class contains the properties for a connection with RabbitMQ.
+ *
+ * @author Cas Decelle
  */
+
 public class RabbitMQProperties extends AMQPProperties {
     private static final String HOST;
     private static final String SENDER_INCIDENT_QUEUE;

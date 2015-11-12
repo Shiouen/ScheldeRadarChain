@@ -6,8 +6,11 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by Cas on 11/11/2015.
+ * This class loads the properties from a properties file.
+ *
+ * @author Cas Decelle
  */
+
 public class AMQPProperties {
     protected final static String PROPERTY_FILE = "properties/amqp.properties";
     protected final static Properties PROPERTIES = new Properties();

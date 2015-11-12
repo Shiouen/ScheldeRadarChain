@@ -1,24 +1,32 @@
 package be.kdg.schelderadarchain.generator.amqp.adapter;
 
 import be.kdg.schelderadarchain.generator.amqp.exceptions.AMQPException;
-import be.kdg.schelderadarchain.generator.dom.ActionReport;
-import be.kdg.schelderadarchain.generator.generator.ActionReportListener;
-import be.kdg.schelderadarchain.generator.utility.XmlConverter;
+import be.kdg.schelderadarchain.generator.backend.dom.ActionReport;
+import be.kdg.schelderadarchain.generator.backend.generator.ActionReportListener;
+import be.kdg.schelderadarchain.generator.backend.utility.XmlConverter;
 import com.rabbitmq.client.*;
-import org.exolab.castor.dsml.XML;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * Created by Cas on 11/11/2015.
+ * This class acts as an adapter between AMQP-based RabbitMQ functionality and
+ * the AMQPCommunicator abstract interface class, separating both codebases.
+ *
+ * This class also acts as a strategy to receive AMQP messages based on RabbitMQs implementation.
+ *
+ * @author Cas Decelle
  */
+
 public class RabbitMQReceiver implements AMQPCommunicator {
+
     private String host;
     private String queue;
 
     private final Channel channel;
     private final Connection connection;
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     private ActionReportListener actionReportListener;
 
@@ -32,16 +40,18 @@ public class RabbitMQReceiver implements AMQPCommunicator {
 
         try {
             this.connection = factory.newConnection();
-        } catch (IOException e) {
-            throw new AMQPException("Error trying to setup the connection with RabbitMQ", e);
-        } catch (TimeoutException e) {
-            throw new AMQPException("Error trying to setup the connection with RabbitMQ", e);
+        } catch (IOException | TimeoutException e) {
+            String message = "Error trying to setup the connection with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
 
         try {
             this.channel = this.connection.createChannel();
         } catch (IOException e) {
-            throw new AMQPException("Error trying to setup the channel with RabbitMQ", e);
+            String message = "Error trying to setup the channel with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
     }
 
@@ -49,13 +59,21 @@ public class RabbitMQReceiver implements AMQPCommunicator {
     public void close() throws AMQPException {
         try {
             this.channel.close();
-        } catch (IOException | TimeoutException e) {
-            throw new AMQPException("Error trying to close the channel with RabbitMQ", e);
+        } catch (IOException e) {
+            String message = "Error trying to close the channel with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
+        } catch (TimeoutException e) {
+            String message = "Timeout trying to close the channel with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
         try {
             this.connection.close();
         } catch (IOException e) {
-            throw new AMQPException("Error trying to close the connection with RabbitMQ", e);
+            String message = "Error trying to close the connection with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
     }
 
@@ -65,7 +83,9 @@ public class RabbitMQReceiver implements AMQPCommunicator {
             // make sure the queue exists
             this.channel.queueDeclare(this.queue, false, false, false, null);
         } catch (IOException e) {
-            throw new AMQPException("Error trying to declare the queue with RabbitMQ", e);
+            String message = "Error trying to declare the queue with RabbitMQ";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
 
         // will buffer the asynchronously delivered calls until we're ready to use them
@@ -81,7 +101,9 @@ public class RabbitMQReceiver implements AMQPCommunicator {
         try {
             this.channel.basicConsume(this.queue, true, consumer);
         } catch (IOException e) {
-            throw new AMQPException("Error trying to poll a message from the queue", e);
+            String message = "Error trying to poll a message from the queue";
+            this.logger.error(message);
+            throw new AMQPException(message, e);
         }
 
     }
