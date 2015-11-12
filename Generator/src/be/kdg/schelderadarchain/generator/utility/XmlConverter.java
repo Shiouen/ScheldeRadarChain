@@ -8,7 +8,6 @@ import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.ValidationException;
 
 import java.io.*;
-import java.net.URL;
 
 /**
  * Created by Cas on 9/11/2015.
@@ -28,8 +27,20 @@ public class XmlConverter {
             marshaller.setWriter(writer);
             marshaller.marshal(o);
         } catch (MarshalException | ValidationException | MappingException | IOException e) {
-            throw new UtilityException("Error during conversion to XML string", e);
+            throw new UtilityException("Error during conversion from object to XML string", e);
         }
         return writer.toString();
+    }
+
+    public static Object fromXml(String s) {
+        Object o;
+        BufferedReader reader = new BufferedReader(new StringReader(s));
+        org.exolab.castor.xml.Unmarshaller unmarshaller = new org.exolab.castor.xml.Unmarshaller();
+        try {
+            o = unmarshaller.unmarshal(reader);
+        } catch (MarshalException | ValidationException e) {
+            throw new UtilityException("Error during conversion from XML string to object", e);
+        }
+        return o;
     }
 }

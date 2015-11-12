@@ -17,8 +17,8 @@ public class RabbitMQProperties extends AMQPProperties {
     }
 
     public static String getHost() { return PROPERTIES.getProperty(HOST); }
-    public static String getReceiverIncidentQueue() { return PROPERTIES.getProperty(SENDER_INCIDENT_QUEUE); }
-    public static String getReceiverPositionQueue() { return PROPERTIES.getProperty(SENDER_POSITION_MESSAGE_QUEUE); }
-    public static String getSenderReportQueue() { return PROPERTIES.getProperty(RECEIVER_INCIDENT_ACTION_REPORT_QUEUE); }
+    public static String getSenderIncidentQueue() { return PROPERTIES.getProperty(SENDER_INCIDENT_QUEUE); }
+    public static String getSenderPositionMessageQueue() { return PROPERTIES.getProperty(SENDER_POSITION_MESSAGE_QUEUE); }
+    public static String getReceiverIncidentActionReportQueue() { return PROPERTIES.getProperty(RECEIVER_INCIDENT_ACTION_REPORT_QUEUE); }
 }
 

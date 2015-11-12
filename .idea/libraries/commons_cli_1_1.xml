@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="commons-cli-1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Generator/lib/rabbitmq/commons-cli-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Generator/lib/rabbitmq/commons-io-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Generator/lib/rabbitmq/hamcrest-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Generator/lib/rabbitmq/rabbitmq-client-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Generator/lib/rabbitmq/rabbitmq-client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

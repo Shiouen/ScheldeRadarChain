@@ -11,7 +11,7 @@ public class IncidentMessage {
     private String incidentType;
 
     public IncidentMessage(IncidentMessageDTO incidentMessageDTO) {
-        this.shipId = incidentMessageDTO.getshipId();
+        this.shipId = incidentMessageDTO.getShipId();
         this.incidentType = incidentMessageDTO.getIncidentType();
     }
 

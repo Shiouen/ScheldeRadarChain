@@ -7,7 +7,7 @@ import com.google.gson.Gson;
  */
 public class JsonConverter {
 
-    public static <T> T fromObject(String json, Class<T> classOfT){
+    public static <T> T fromJson(String json, Class<T> classOfT){
         return new Gson().fromJson(json, classOfT);
     }
 

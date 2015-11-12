@@ -8,7 +8,7 @@ public class IncidentMessageDTO {
     private String IMO;
     private String incidentType;
 
-    public String getshipId() {
+    public String getShipId() {
         return this.IMO.substring(3);
     }
     public String getIncidentType() {

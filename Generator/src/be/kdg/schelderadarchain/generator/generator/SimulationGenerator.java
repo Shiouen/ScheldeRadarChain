@@ -1,62 +1,51 @@
 package be.kdg.schelderadarchain.generator.generator;
 
-import be.kdg.schelderadarchain.generator.dom.IncidentMessage;
+import be.kdg.schelderadarchain.generator.amqp.adapter.AMQPCommunicator;
+import be.kdg.schelderadarchain.generator.amqp.adapter.RabbitMQReceiver;
+import be.kdg.schelderadarchain.generator.amqp.adapter.RabbitMQSender;
+import be.kdg.schelderadarchain.generator.amqp.properties.RabbitMQProperties;
+import be.kdg.schelderadarchain.generator.dom.*;
 import be.kdg.schelderadarchain.generator.dto.IncidentMessageDTO;
+import be.kdg.schelderadarchain.generator.dto.IncidentStatusMessageDTO;
 import be.kdg.schelderadarchain.generator.utility.JsonConverter;
 import be.kdg.schelderadarchain.generator.utility.RouteFileReader;
 import be.kdg.schelderadarchain.generator.utility.XmlConverter;
 import be.kdg.se3.proxy.IncidentServiceProxy;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Cas on 9/11/2015.
  */
-public class SimulationGenerator extends BaseGenerator implements IncidentHandler {
+public class SimulationGenerator extends BaseGenerator implements ActionReportListener {
 
-    private final int INCIDENT_FREQUENCY = 20;
+    private final int INCIDENT_FREQUENCY = 100;     //in % chance per position message
     private final String SEPARATOR = ";";
     private final String INCIDENT_URL = "www.services4se3.com/incidentservice/simulate/";
-    private final int BEGIN_INDEX = 0;
+    private final String STATUS_URL = "www.services4se3.com/incidentservice/status/";
     private final String ROUTEFILE_FOLDER = "routes";
+    private AMQPCommunicator receiver;
 
-    private List<String> shipIds;
 
     @Override
     public void start() {
-        this.shipIds = this.readShipIds(this.ROUTEFILE_FOLDER);
-        String randomShipId = shipIds.get(random.nextInt(shipIds.size()));
-        this.positionMessages.addAll(RouteFileReader.readPositionMessagesFromCsv(randomShipId, this.SEPARATOR));
-        new SimulationTimerTask(this, randomShipId, this.INCIDENT_FREQUENCY).run();
-        super.start();
-    }
+        this.receiver = new RabbitMQReceiver(RabbitMQProperties.getHost(), RabbitMQProperties.getReceiverIncidentActionReportQueue(), this);
+        this.routes.addAll(RouteFileReader.readRouteFilesFromCsv(ROUTEFILE_FOLDER, this.SEPARATOR));
 
-    public ArrayList<String> readShipIds(String folderName){
-        ArrayList<String> ids = new ArrayList<>();
-        try {
-            File folder = new File(Thread.currentThread().getContextClassLoader().getResource(folderName).toURI());
-            for (File file : folder.listFiles()) {
-                if (file.isFile()){
-                    String shipId = file.getName();
-                    int index = shipId.indexOf(".");
-                    ids.add(shipId.substring(this.BEGIN_INDEX, index));
-                }
-            }
-        } catch (URISyntaxException e) {
-            throw new GeneratorException("Unexpected error reading the route files", e);
+        for(Route route : routes){
+            RouteLoop loop = new RouteLoop(route, this, this.INCIDENT_FREQUENCY);
+            loops.add(loop);
+            Thread thread = new Thread(loop);
+            thread.setUncaughtExceptionHandler(this);
+            thread.start();
         }
-        return ids;
     }
 
     @Override
-    public IncidentMessage receiveIncidentMessage(String shipId){
+    public IncidentMessage receiveIncident(String shipId){
         try {
             String incident = new IncidentServiceProxy().get(this.INCIDENT_URL + shipId);
-            IncidentMessageDTO incidentMessageDTO = JsonConverter.fromObject(incident, IncidentMessageDTO.class);
+            IncidentMessageDTO incidentMessageDTO = JsonConverter.fromJson(incident, IncidentMessageDTO.class);
             IncidentMessage incidentMessage = new IncidentMessage(incidentMessageDTO);
             return incidentMessage;
 
@@ -66,9 +55,41 @@ public class SimulationGenerator extends BaseGenerator implements IncidentHandle
     }
 
     @Override
-    public void sendIncidentMessage(IncidentMessage incidentMessage) {
-        //TODO vervangen door RabbitMQ aanroep
-        System.out.println(XmlConverter.toXml(incidentMessage));
+    public IncidentStatusMessage receiveIncidentStatusMessage(String shipId) {
+        try {
+            String status = new IncidentServiceProxy().get(this.STATUS_URL + shipId);
+            IncidentStatusMessageDTO incidentStatusMessageDTO = JsonConverter.fromJson(status, IncidentStatusMessageDTO.class);
+            IncidentStatusMessage incidentStatusMessage = new IncidentStatusMessage(incidentStatusMessageDTO);
+            return incidentStatusMessage;
+
+        } catch (IOException e) {
+            throw new GeneratorException("Unexpected error in incident service proxy", e);
+        }
+    }
+
+    @Override
+    public void sendIncident(IncidentMessage message) {
+        String xmlMessage = XmlConverter.toXml(message);
+        this.sender = new RabbitMQSender(RabbitMQProperties.getHost(), RabbitMQProperties.getSenderIncidentQueue(), xmlMessage);
+        this.sender.open();
+        this.sender.close();
+    }
+
+    @Override
+    public void sendPositionMessage(PositionMessage message) {
+        String xmlMessage = XmlConverter.toXml(message);
+        this.sender = new RabbitMQSender(RabbitMQProperties.getHost(), RabbitMQProperties.getSenderPositionMessageQueue(), xmlMessage);
+        this.sender.open();
+        this.sender.close();
+    }
+
+    @Override
+    public void onActionReportReceived(ActionReport actionReport) {
+        String type = actionReport.getType();
+        for (RouteLoop loop : loops){
+            if (type.equalsIgnoreCase("AlleSchepenVoorAnker")) loop.setStationary(true);
+            if (type.equalsIgnoreCase("AlleSchepenInZoneVoorAnker")) loop.setStationary(true, actionReport.getShipId());
+        }
     }
 }
 

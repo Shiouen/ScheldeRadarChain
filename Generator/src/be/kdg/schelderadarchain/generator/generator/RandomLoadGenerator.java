@@ -1,12 +1,11 @@
 package be.kdg.schelderadarchain.generator.generator;
 
-import be.kdg.schelderadarchain.generator.dom.LoadSchedule;
+import be.kdg.schelderadarchain.generator.amqp.adapter.RabbitMQSender;
+import be.kdg.schelderadarchain.generator.amqp.properties.RabbitMQProperties;
+import be.kdg.schelderadarchain.generator.dom.IncidentMessage;
+import be.kdg.schelderadarchain.generator.dom.IncidentStatusMessage;
 import be.kdg.schelderadarchain.generator.dom.PositionMessage;
-
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import be.kdg.schelderadarchain.generator.utility.XmlConverter;
 
 
 /**
@@ -30,7 +29,6 @@ public class RandomLoadGenerator extends BaseGenerator {
 
     @Override
     public void start() {
-        super.start();
     }
 
     public PositionMessage generateRandomPositionMessage(){
@@ -46,8 +44,31 @@ public class RandomLoadGenerator extends BaseGenerator {
             shipId = Integer.toString(random.nextInt(this.MAX_SHIP_ID - this.MIN_SHIP_ID) + this.MIN_SHIP_ID);
         }
         for (int i = 0; i < this.NUMBER_OF_POSITION_MESSAGES; i++) {
-            PositionMessage positionMessage = this.generateRandomPositionMessage();
-            this.positionMessages.add(positionMessage);
+           /* PositionMessage positionMessage = this.generateRandomPositionMessage();
+            this.positionMessages.add(positionMessage);*/
         }
+    }
+
+    @Override
+    public void sendPositionMessage(PositionMessage message) {
+        String xmlMessage = XmlConverter.toXml(message);
+        this.sender = new RabbitMQSender(RabbitMQProperties.getHost(), RabbitMQProperties.getSenderPositionMessageQueue(), xmlMessage);
+        this.sender.open();
+        this.sender.close();
+    }
+
+    @Override
+    public void sendIncident(IncidentMessage incidentMessage) {
+
+    }
+
+    @Override
+    public IncidentMessage receiveIncident(String shipId) {
+        return null;
+    }
+
+    @Override
+    public IncidentStatusMessage receiveIncidentStatusMessage(String shipId) {
+        return null;
     }
 }

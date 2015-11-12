@@ -1,6 +1,6 @@
 package be.kdg.schelderadarchain.generator.amqp.properties;
 
-import be.kdg.schelderadarchain.generator.amqp.AMQPException;
+import be.kdg.schelderadarchain.generator.amqp.exceptions.AMQPException;
 
 import java.io.IOException;
 import java.util.Properties;

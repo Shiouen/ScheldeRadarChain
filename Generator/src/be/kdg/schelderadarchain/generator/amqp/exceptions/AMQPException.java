@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.generator.amqp;
+package be.kdg.schelderadarchain.generator.amqp.exceptions;
 
 /**
  * Created by Cas on 11/11/2015.

@@ -1,6 +1,7 @@
 package be.kdg.schelderadarchain.generator.generator;
 
-import be.kdg.schelderadarchain.generator.dom.PositionMessage;
+import be.kdg.schelderadarchain.generator.amqp.adapter.AMQPCommunicator;
+import be.kdg.schelderadarchain.generator.dom.Route;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,31 +10,24 @@ import java.util.Random;
 /**
  * Created by Cas on 9/11/2015.
  */
-public abstract class BaseGenerator implements Thread.UncaughtExceptionHandler {
+public abstract class BaseGenerator implements Thread.UncaughtExceptionHandler, MessageHandler {
 
-    protected final Collection<PositionMessage> positionMessages = new ArrayList<>();
-    protected final Collection<PositionMessageLoop> loops = new ArrayList<>();
+    protected final Collection<Route> routes = new ArrayList<>();
+    protected final Collection<RouteLoop> loops = new ArrayList<>();
     protected Random random = new Random();
+    protected AMQPCommunicator sender;
 
-    public void start() {
-        for(PositionMessage positionMessage : positionMessages){
-            PositionMessageLoop loop = new PositionMessageLoop(positionMessage);
-            loops.add(loop);
-            Thread thread = new Thread(loop);
-            thread.setUncaughtExceptionHandler(this);
-            thread.start();
-        }
-    }
+    public abstract void start();
 
-    public void stop() {
-        for(PositionMessageLoop loop : loops){
+    public final void stop() {
+        for(RouteLoop loop : loops){
             loop.stop();
         }
     }
 
     @Override
     public final void uncaughtException(Thread t, Throwable e) {
-        throw new GeneratorException("Unexpected error in position loop", e);
+        throw new GeneratorException("Unexpected error in route loop", e);
     }
 
 }
