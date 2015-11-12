@@ -3,7 +3,9 @@ package be.kdg.schelderadarchain.processor.model;
 import java.util.List;
 
 /**
- * Created by Olivier on 10-Nov-15.
+ * This model class represents a Ship within the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class Ship extends Message {
     private int passengerAmount;

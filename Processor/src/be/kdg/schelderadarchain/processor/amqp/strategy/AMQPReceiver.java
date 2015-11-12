@@ -1,11 +1,13 @@
 package be.kdg.schelderadarchain.processor.amqp.strategy;
 
 import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPCommunicator;
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.observer.AMQPReceiverConsumer;
 
 /**
- * Created by Olivier on 11-Nov-15.
+ * This strategy interface defines a way to receive AMQP messages.
+ *
+ * @author Olivier Van Aken
  */
 public interface AMQPReceiver<T> extends AMQPCommunicator {
     @Override

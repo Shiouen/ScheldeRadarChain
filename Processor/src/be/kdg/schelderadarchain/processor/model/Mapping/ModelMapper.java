@@ -9,7 +9,9 @@ import be.kdg.schelderadarchain.processor.model.*;
 import be.kdg.schelderadarchain.processor.utility.StringUtils;
 
 /**
- * Created by Olivier on 09/11/2015.
+ * This class provides model mapping throughout the processor.
+ *
+ * @author Olivier Van Aken
  */
 public final class ModelMapper {
     public static Incident map(AMQPIncident amqpIncident) {

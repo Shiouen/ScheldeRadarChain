@@ -3,7 +3,9 @@ package be.kdg.schelderadarchain.processor.model;
 import java.time.LocalDateTime;
 
 /**
- * Created by Olivier on 09/11/2015.
+ * This model class represents a Position within the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class Position extends Message {
     private int distanceToLoadingDock;

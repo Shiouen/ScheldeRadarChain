@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.processor.amqp.adapter;
+package be.kdg.schelderadarchain.processor.amqp.exception;
 
 /**
  * Exception class for any exception concerning the AMQP.

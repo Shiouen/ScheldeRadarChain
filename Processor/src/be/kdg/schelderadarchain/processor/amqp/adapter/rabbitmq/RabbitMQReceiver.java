@@ -9,9 +9,9 @@ import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.AMQP.BasicProperties;
 
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
-import be.kdg.schelderadarchain.processor.utility.xml.XmlDataBinder;
+import be.kdg.schelderadarchain.processor.utility.xml.XmlUtils;
 
 /**
  * This class acts as an adapter between AMQP-based RabbitMQ functionality and
@@ -67,9 +67,9 @@ public class RabbitMQReceiver<T> implements AMQPReceiver<T> {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties,
                                        byte[] body) throws IOException {
-                XmlDataBinder<T> xmlDataBinder = new XmlDataBinder<>(RabbitMQReceiver.this.type);
+                XmlUtils<T> xmlUtils = new XmlUtils<>(RabbitMQReceiver.this.type);
 
-                T message = xmlDataBinder.bind(new String(body, "UTF-8"));
+                T message = xmlUtils.bind(new String(body, "UTF-8"));
                 RabbitMQReceiver.this.consumer.receive(message);
                 // maybe for log: System.out.println(" [x] Received '" + message + "'");
             }

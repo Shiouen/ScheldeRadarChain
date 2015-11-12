@@ -2,13 +2,13 @@ package be.kdg.schelderadarchain.processor.controller;
 
 import java.util.Scanner;
 
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.properties.RabbitMQProperties;
 import be.kdg.schelderadarchain.processor.buffer.ShipCache;
 import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
- * Created by Olivier on 03-Nov-15.
+ * This class acts as a starting point for the application.
  */
 public class ProcessorController {
     private IncidentController incidentController;

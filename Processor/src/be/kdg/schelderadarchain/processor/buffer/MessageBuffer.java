@@ -27,6 +27,7 @@ public class MessageBuffer implements Buffer<Integer, Message> {
     public List<Message> getMessages(Integer shipId) {
         return this.buffer.get(shipId);
     }
+    public ShipCache getCache() { return this.cache; }
 
     @Override
     public boolean isBuffered(Integer shipId) {

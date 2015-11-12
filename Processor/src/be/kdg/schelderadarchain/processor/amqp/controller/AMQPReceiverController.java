@@ -1,7 +1,7 @@
 package be.kdg.schelderadarchain.processor.amqp.controller;
 
 import be.kdg.schelderadarchain.processor.amqp.observer.AMQPReceiverConsumer;
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
 
 /**

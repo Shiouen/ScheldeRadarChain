@@ -1,5 +1,10 @@
 package be.kdg.schelderadarchain.processor.model;
 
+/**
+ * This abstract model class enables the collection of its subclasses altogether.
+ *
+ * @author Olivier Van Aken
+ */
 public abstract class Message {
     protected int shipId;
 

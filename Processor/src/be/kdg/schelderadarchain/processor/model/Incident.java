@@ -1,7 +1,9 @@
 package be.kdg.schelderadarchain.processor.model;
 
 /**
- * Created by Olivier on 09/11/2015.
+ * This model class represents an Incident within the processor
+ *
+ * @author Olivier Van Aken.
  */
 public class Incident extends Message {
     private String incidentType;

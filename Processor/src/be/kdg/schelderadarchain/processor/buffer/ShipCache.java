@@ -18,13 +18,13 @@ public class ShipCache implements Buffer<Integer, Ship> {
         this.scheduleFactory = new BufferScheduleFactory();
     }
 
-    public Ship getInfoMessage(Integer shipId) {
+    public Ship getShip(Integer shipId) {
         return this.cache.get(shipId);
     }
 
     @Override
     public boolean isBuffered(Integer shipId) {
-        return this.getInfoMessage(shipId) != null;
+        return this.getShip(shipId) != null;
     }
 
     @Override
