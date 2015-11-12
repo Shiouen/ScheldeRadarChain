@@ -1,43 +1,36 @@
 package be.kdg.schelderadarchain.processor.amqp.controller;
 
-import java.util.List;
-
-import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiverException;
-import be.kdg.schelderadarchain.processor.amqp.strategy.ControlledAMQPReceiver;
-import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
-
-import javax.naming.ldap.Control;
+import be.kdg.schelderadarchain.processor.amqp.observer.AMQPReceiverConsumer;
+import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
 
 /**
- * This class acts as an abstract observer for AMQPReceiver object.
- *
- * This class provides control of its AMQPReceiver object.
- *
- * @author Olivier Van Aken
+ * Created by Olivier on 12-Nov-15.
  */
-public abstract class AMQPReceiverController {
-    protected ControlledAMQPReceiver amqpReceiver;
+public abstract class AMQPReceiverController<T> implements AMQPReceiverConsumer<T> {
+    private AMQPReceiver<T> amqpReceiver;
 
-    protected AMQPReceiverController(ControlledAMQPReceiver amqpReceiver) {
+    public AMQPReceiverController(AMQPReceiver<T> amqpReceiver) {
         this.amqpReceiver = amqpReceiver;
-        this.amqpReceiver.setController(this);
+        this.amqpReceiver.setConsumer(this);
     }
 
-    public abstract void receive(AMQPMessage AmqpMessage);
+    @Override
+    public abstract void receive(T message);
 
-    public final void startReceiving() {
+    public final void startReceiver() throws AMQPException {
         try {
             this.amqpReceiver.open();
-        } catch (AMQPReceiverException e) {
-            // log as error, exit
+        } catch (AMQPException e) {
+            throw e;
         }
     }
 
-    public final void stopReceiving() {
+    public final void stopReceiver() throws AMQPException {
         try {
             this.amqpReceiver.close();
-        } catch (AMQPReceiverException e) {
-            // log as error, exit
+        } catch (AMQPException e) {
+            throw e;
         }
     }
 }

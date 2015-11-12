@@ -6,10 +6,13 @@ package be.kdg.schelderadarchain.processor.model;
 public class Incident extends Message {
     private String incidentType;
 
-    public Incident() { }
+    public Incident(int shipId, String incidentType) {
+        super(shipId);
 
-    public String getIncidentType() { return incidentType; }
-    public void setIncidentType(String incidentType) { this.incidentType = incidentType; }
+        this.incidentType = incidentType;
+    }
+
+    public String getIncidentType() { return this.incidentType; }
 
     @Override
     public String toString() {

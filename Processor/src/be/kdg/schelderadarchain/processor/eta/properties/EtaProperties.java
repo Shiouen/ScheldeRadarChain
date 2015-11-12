@@ -5,11 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import be.kdg.schelderadarchain.processor.eta.strategy.calculation.EtaCalculationMethod;
-import be.kdg.schelderadarchain.processor.eta.strategy.calculation.RoughMethod;
-import be.kdg.schelderadarchain.processor.eta.strategy.trigger.EtaTrigger;
-import be.kdg.schelderadarchain.processor.eta.strategy.trigger.PositionTrigger;
-import be.kdg.schelderadarchain.processor.eta.strategy.trigger.ZoneTrigger;
+import be.kdg.schelderadarchain.processor.eta.strategy.calculation.*;
+import be.kdg.schelderadarchain.processor.eta.strategy.trigger.*;
 
 public class EtaProperties {
     private static final String ETA_METHOD;
@@ -54,12 +51,12 @@ public class EtaProperties {
     public static EtaTrigger getEtaTrigger() {
         String trigger = PROPERTIES.getProperty(ETA_TRIGGER);
         switch (trigger) {
-            case "position.change":
+            case "position":
                 return new PositionTrigger();
-            case "zone.change":
+            case "zone":
                 return new ZoneTrigger();
             default:
-                return new PositionTrigger();
+                return new AlwaysTrigger();
         }
     }
 

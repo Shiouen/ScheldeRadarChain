@@ -1,36 +1,31 @@
 package be.kdg.schelderadarchain.processor.model.mapping;
 
-import java.io.Reader;
-import java.io.StringReader;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceCargo;
-import be.kdg.schelderadarchain.processor.buffer.dto.ShipServiceShip;
-import be.kdg.schelderadarchain.processor.model.Cargo;
-import be.kdg.schelderadarchain.processor.model.Ship;
+import be.kdg.schelderadarchain.processor.amqp.dto.*;
+import be.kdg.schelderadarchain.processor.buffer.dto.*;
+import be.kdg.schelderadarchain.processor.model.*;
 import be.kdg.schelderadarchain.processor.utility.StringUtils;
-import org.exolab.castor.xml.MarshalException;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.xml.ValidationException;
-
-import be.kdg.schelderadarchain.processor.amqp.dto.AMQPMessage;
 
 /**
  * Created by Olivier on 09/11/2015.
  */
 public final class ModelMapper {
-    public static Object map(AMQPMessage amqpMessage, Class<?> target) {
-        Reader reader = new StringReader(amqpMessage.getMessage());
+    public static Incident map(AMQPIncident amqpIncident) {
+        int shipId = amqpIncident.getShipId();
+        String incidentType = amqpIncident.getIncidentType();
 
-        try {
-            return Unmarshaller.unmarshal(target, reader);
-        } catch (MarshalException e) {
-            // lol
-            return null;
-        } catch (ValidationException e) {
-            // lol
-            return null;
-        }
+        return new Incident(shipId, incidentType);
+    }
+
+    public static Position map(AMQPPosition amqpPosition) {
+        int shipId = amqpPosition.getShipId();
+        int distance = amqpPosition.getDistanceToLoadingDock();
+        String stationId = amqpPosition.getStationId();
+        LocalDateTime timestamp = amqpPosition.getTimestamp().toLocalDateTime();
+
+        return new Position(shipId, distance, stationId, timestamp);
     }
 
     public static Ship map(ShipServiceShip msg) {

@@ -10,17 +10,17 @@ public class Position extends Message {
     private String stationId;
     private LocalDateTime timestamp;
 
-    public Position() { }
+    public Position(int shipId, int distanceToLoadingDock, String stationId, LocalDateTime timestamp) {
+        super(shipId);
+
+        this.distanceToLoadingDock = distanceToLoadingDock;
+        this.stationId = stationId;
+        this.timestamp = timestamp;
+    }
 
     public int getDistanceToLoadingDock() { return this.distanceToLoadingDock; }
     public String getStationId() { return this.stationId; }
     public LocalDateTime getTimestamp() { return this.timestamp; }
-
-    public void setDistanceToLoadingDock(int distanceToLoadingDock) {
-        this.distanceToLoadingDock = distanceToLoadingDock;
-    }
-    public void setStationId(String stationId) { this.stationId = stationId; }
-    public void setTimestamp(LocalDateTime timestamp) { this.timestamp = timestamp; }
 
     @Override
     public String toString() {

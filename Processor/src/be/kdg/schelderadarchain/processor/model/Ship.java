@@ -11,7 +11,8 @@ public class Ship extends Message {
     private List<Cargo> cargo;
 
     public Ship(int shipId, int passengerAmount, boolean hasDangerousCargo, List<Cargo> cargo) {
-        this.shipId = shipId;
+        super(shipId);
+
         this.passengerAmount = passengerAmount;
         this.hasDangerousCargo = hasDangerousCargo;
         this.cargo = cargo;
