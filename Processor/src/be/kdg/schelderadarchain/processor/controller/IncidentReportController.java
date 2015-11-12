@@ -7,6 +7,8 @@ import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 
 /**
  * This class is an implementation of an AMQPSenderController for AMQPIncidentReport messages.
+ *
+ * @author Olivier Van Aken
  */
 public class IncidentReportController extends AMQPSenderController<AMQPIncidentReport> {
     public IncidentReportController(String host, String queue) {

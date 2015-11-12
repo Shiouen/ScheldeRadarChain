@@ -5,6 +5,11 @@ import java.util.Timer;
 
 import be.kdg.schelderadarchain.processor.buffer.Buffer;
 
+/**
+ * This class provides cleaner scheduling of buffer objects.
+ *
+ * @author Olivier Van Aken
+ */
 public final class BufferScheduleFactory {
     private final HashMap<Object, BufferSchedule> schedules;
 

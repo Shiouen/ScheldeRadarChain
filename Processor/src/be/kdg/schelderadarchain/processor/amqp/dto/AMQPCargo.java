@@ -1,7 +1,9 @@
-package be.kdg.schelderadarchain.processor.model;
+package be.kdg.schelderadarchain.processor.amqp.dto;
 
 /**
- * Created by Olivier on 12-Nov-15.
+ * This DTO class represents Cargo within the AMQP part of the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPCargo {
     private int amount;

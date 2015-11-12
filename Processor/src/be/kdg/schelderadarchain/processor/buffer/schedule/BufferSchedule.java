@@ -5,6 +5,11 @@ import java.util.TimerTask;
 
 import be.kdg.schelderadarchain.processor.buffer.Buffer;
 
+/**
+ * This class schedules the removal of any object in the buffer given a key.
+ *
+ * @author Olivier Van Aken
+ */
 public class BufferSchedule extends TimerTask {
     private Buffer buffer;
     private Object key;
@@ -18,7 +23,6 @@ public class BufferSchedule extends TimerTask {
 
     @Override
     public void run() {
-        System.out.println("yo");
         this.timer.cancel();
         this.buffer.clear(this.key);
     }

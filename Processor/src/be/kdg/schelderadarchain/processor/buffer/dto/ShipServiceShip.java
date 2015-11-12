@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 /**
- * Created by Olivier on 10-Nov-15.
+ * This DTO class represents a Ship within the buffer part of the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class ShipServiceShip {
     private String IMO;

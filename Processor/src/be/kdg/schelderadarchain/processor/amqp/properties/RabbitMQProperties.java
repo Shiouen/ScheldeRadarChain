@@ -1,5 +1,10 @@
 package be.kdg.schelderadarchain.processor.amqp.properties;
 
+/**
+ * AMQP Properties handler class for RabbitMQ Properties.
+ *
+ * @author Olivier Van Aken
+ */
 public class RabbitMQProperties extends AMQPProperties {
     private static final String HOST;
     private static final String RECEIVER_INCIDENT_QUEUE;

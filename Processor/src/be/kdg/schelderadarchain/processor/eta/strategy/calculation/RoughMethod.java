@@ -7,6 +7,11 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * This class represents a strategy to calculate ETA.
+ *
+ * In this case, calculations aren't very precise.
+ */
 public class RoughMethod implements EtaCalculationMethod {
     public RoughMethod() { }
 

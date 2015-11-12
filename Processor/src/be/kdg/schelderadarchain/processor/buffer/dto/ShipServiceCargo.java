@@ -1,5 +1,10 @@
 package be.kdg.schelderadarchain.processor.buffer.dto;
 
+/**
+ * This DTO class represents Cargo within the buffer part of the processor.
+ *
+ * @author Olivier Van Aken
+ */
 public class ShipServiceCargo {
     private int amount;
     private String type;

@@ -4,7 +4,9 @@ import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPSender;
 
 /**
- * Created by Olivier on 12-Nov-15.
+ * This abstract class enables its subclasses control over an AMQPSender<T> object
+ *
+ * @author Olivier Van Aken
  */
 public abstract class AMQPSenderController<T> {
     private AMQPSender<T> amqpSender;
@@ -13,6 +15,11 @@ public abstract class AMQPSenderController<T> {
         this.amqpSender = amqpSender;
     }
 
+    /**
+     * Method defining a default implementation on how to send messages.
+     *
+     * @param message The message to receive.
+     */
     public void send(T message) throws AMQPException {
         try {
             this.amqpSender.send(message);

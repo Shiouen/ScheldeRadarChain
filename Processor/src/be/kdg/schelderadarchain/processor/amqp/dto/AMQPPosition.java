@@ -4,7 +4,9 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 /**
- * Created by Olivier on 11-Nov-15.
+ * This DTO class represents a Position within the AMQP part of the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPPosition {
     private int shipId;

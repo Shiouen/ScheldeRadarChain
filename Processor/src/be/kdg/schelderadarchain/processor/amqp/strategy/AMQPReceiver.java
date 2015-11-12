@@ -16,5 +16,11 @@ public interface AMQPReceiver<T> extends AMQPCommunicator {
     @Override
     void open() throws AMQPException;
 
+    /**
+     * This method defines that all AMQPReceivers should be able
+     * to have a consumer.
+     *
+     * @param consumer Consumer to pass messages to.
+     */
     void setConsumer(AMQPReceiverConsumer<T> consumer);
 }

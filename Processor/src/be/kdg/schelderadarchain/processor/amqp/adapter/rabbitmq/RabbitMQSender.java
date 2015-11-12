@@ -1,11 +1,13 @@
 package be.kdg.schelderadarchain.processor.amqp.adapter.rabbitmq;
 
+import java.io.IOException;
+
+import com.rabbitmq.client.Channel;
+import org.apache.log4j.Logger;
+
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPSender;
 import be.kdg.schelderadarchain.processor.utility.xml.XmlUtils;
-import com.rabbitmq.client.Channel;
-
-import java.io.IOException;
 
 /**
  * This class acts as an adapter between AMQP-based RabbitMQ functionality and
@@ -18,6 +20,8 @@ import java.io.IOException;
 public class RabbitMQSender<T> implements AMQPSender<T> {
     private final RabbitMQCommunicator communicator;
     private final Class<?> type;
+
+    private final static Logger logger = Logger.getLogger(RabbitMQReceiver.class);
 
     public RabbitMQSender(String host, String queue, Class<?> type) {
         this.communicator = new RabbitMQCommunicator(host, queue);
@@ -54,6 +58,7 @@ public class RabbitMQSender<T> implements AMQPSender<T> {
 
         try {
             channel.basicPublish("", queue, null, xml.getBytes());
+            logger.info("Sent message");
         } catch (IOException e) {
             String msg = "Something went wrong trying to send a message to the queue for channel=%s " +
                     "with RabbitMQ host=%s";

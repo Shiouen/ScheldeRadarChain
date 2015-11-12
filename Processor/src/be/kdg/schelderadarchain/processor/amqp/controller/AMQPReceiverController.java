@@ -5,7 +5,9 @@ import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
 
 /**
- * Created by Olivier on 12-Nov-15.
+ * This abstract class enables its subclasses control over and consumption from an AMQPReceiver<T> object
+ *
+ * @author Olivier Van Aken
  */
 public abstract class AMQPReceiverController<T> implements AMQPReceiverConsumer<T> {
     private AMQPReceiver<T> amqpReceiver;

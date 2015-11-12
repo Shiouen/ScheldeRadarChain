@@ -2,16 +2,22 @@ package be.kdg.schelderadarchain.processor.buffer;
 
 import java.util.HashMap;
 
+import org.apache.log4j.Logger;
+
 import be.kdg.schelderadarchain.processor.buffer.properties.BufferProperties;
 import be.kdg.schelderadarchain.processor.buffer.schedule.BufferScheduleFactory;
 import be.kdg.schelderadarchain.processor.model.Ship;
 
 /**
- * Created by Olivier on 10-Nov-15.
+ * This class is a Buffer<Integer, Ship> implementation that makes use of a HashMap containing keys towards Ships.
+ *
+ * Its Ships are kept temporarily using BufferSchedules.
  */
 public class ShipCache implements Buffer<Integer, Ship> {
     private HashMap<Integer, Ship> cache;
     private BufferScheduleFactory scheduleFactory;
+
+    private final static Logger logger = Logger.getLogger(ShipCache.class);
 
     public ShipCache() {
         this.cache = new HashMap<>();
@@ -32,6 +38,7 @@ public class ShipCache implements Buffer<Integer, Ship> {
         Integer shipId = message.getShipId();
 
         this.cache.put(shipId, message);
+        this.logger.info(String.format("Caching Ship %s information", shipId));
 
         this.scheduleFactory.schedule(this, shipId, BufferProperties.getInfoMessageBufferDuration());
     }
@@ -39,5 +46,6 @@ public class ShipCache implements Buffer<Integer, Ship> {
     @Override
     public void clear(Integer shipId) {
         this.cache.put(shipId, null);
+        this.logger.info(String.format("Clearing Ship %s cached information", shipId));
     }
 }

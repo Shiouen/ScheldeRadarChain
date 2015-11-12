@@ -1,5 +1,10 @@
 package be.kdg.schelderadarchain.processor.utility;
 
+/**
+ * String utility class
+ *
+ * @author Olivier Van Aken
+ */
 public final class StringUtils {
     private StringUtils() { }
 

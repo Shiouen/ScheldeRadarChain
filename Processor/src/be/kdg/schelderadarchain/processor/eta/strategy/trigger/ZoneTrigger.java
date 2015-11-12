@@ -4,6 +4,11 @@ import java.util.List;
 
 import be.kdg.schelderadarchain.processor.model.Position;
 
+/**
+ * This EtaTrigger strategy implementation triggers when there is a change in zone.
+ *
+ * @author Olivier Van Aken
+ */
 public class ZoneTrigger implements EtaTrigger {
     @Override
     public boolean isTriggeredBy(List<Position> positions) {

@@ -2,6 +2,8 @@ package be.kdg.schelderadarchain.processor.controller;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 import be.kdg.schelderadarchain.processor.amqp.properties.RabbitMQProperties;
 import be.kdg.schelderadarchain.processor.buffer.ShipCache;
@@ -9,6 +11,8 @@ import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
  * This class acts as a starting point for the application.
+ *
+ * @author Olivier Van Aken
  */
 public class ProcessorController {
     private IncidentController incidentController;
@@ -16,6 +20,8 @@ public class ProcessorController {
 
     private MessageBuffer messageBuffer;
     private ShipCache shipCache;
+
+    private final static Logger logger = Logger.getLogger(ProcessorController.class);
 
     public ProcessorController() {
         this.shipCache = new ShipCache();
@@ -37,7 +43,7 @@ public class ProcessorController {
             this.incidentController.startReceiver();
             this.positionController.startReceiver();
         } catch (AMQPException e) {
-            System.out.println(e.getMessage());
+            logger.fatal(e.getMessage());
             System.exit(1);
         }
     }
@@ -47,7 +53,7 @@ public class ProcessorController {
             this.incidentController.stopReceiver();
             this.positionController.stopReceiver();
         } catch (AMQPException e) {
-            System.out.println(e.getMessage());
+            logger.fatal(e.getMessage());
             System.exit(1);
         }
     }

@@ -2,8 +2,11 @@ package be.kdg.schelderadarchain.processor.amqp.dto;
 
 import java.util.List;
 
-import be.kdg.schelderadarchain.processor.model.AMQPCargo;
-
+/**
+ * This DTO class represents an IncidentReport within the AMQP part of the processor.
+ *
+ * @author Olivier Van Aken
+ */
 public class AMQPIncidentReport {
     private int shipId;
     private int passengerAmount;

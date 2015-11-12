@@ -1,7 +1,9 @@
 package be.kdg.schelderadarchain.processor.amqp.dto;
 
 /**
- * Created by Olivier on 11-Nov-15.
+ * This DTO class represents an Incident within the AMQP part of the processor.
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPIncident {
     private int shipId;

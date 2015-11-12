@@ -10,6 +10,8 @@ import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
  *
  * This class also acts as a strategy to receive AMQP messages based on ActiveMQs implementation.
  *
+ * It currently serves only as an example of the strategy pattern.
+ *
  * @author Olivier Van Aken
  */
 public class ActiveMQReceiver<T> implements AMQPReceiver<T> {

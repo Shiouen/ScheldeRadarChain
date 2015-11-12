@@ -3,6 +3,11 @@ package be.kdg.schelderadarchain.processor.buffer.properties;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * Properties handler class for buffer properties.
+ *
+ * @author Olivier Van Aken
+ */
 public class BufferProperties {
     private static final String MESSAGE_BUFFER_DURATION;
     private static final String INFO_MESSAGE_BUFFER_DURATION;

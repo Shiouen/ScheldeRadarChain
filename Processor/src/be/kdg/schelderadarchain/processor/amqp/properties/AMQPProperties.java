@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by Olivier on 04-Nov-15.
+ * Properties handler class for AMQP properties.
+ *
+ * @author Olivier Van Aken
  */
 public class AMQPProperties {
     protected final static String PROPERTY_FILE = "properties/amqp.properties";

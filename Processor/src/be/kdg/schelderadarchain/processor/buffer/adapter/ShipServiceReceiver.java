@@ -11,6 +11,11 @@ import be.kdg.schelderadarchain.processor.buffer.properties.BufferProperties;
 import be.kdg.schelderadarchain.processor.model.Ship;
 import be.kdg.schelderadarchain.processor.model.mapping.ModelMapper;
 
+/**
+ * This class acts as an adapter between the ShipServiceProxy and Processor separating both codebases.
+ *
+ * @author Olivier Van Aken
+ */
 public final class ShipServiceReceiver {
     private int attempts;
     private boolean error;

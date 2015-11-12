@@ -8,6 +8,11 @@ import java.util.Properties;
 import be.kdg.schelderadarchain.processor.eta.strategy.calculation.*;
 import be.kdg.schelderadarchain.processor.eta.strategy.trigger.*;
 
+/**
+ * Properties handler class for eta properties.
+ *
+ * @author Olivier Van Aken
+ */
 public class EtaProperties {
     private static final String ETA_METHOD;
     private static final String ETA_SHIPS;

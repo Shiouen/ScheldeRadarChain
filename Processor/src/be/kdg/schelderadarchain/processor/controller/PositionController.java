@@ -20,6 +20,8 @@ import be.kdg.schelderadarchain.processor.buffer.MessageBuffer;
 
 /**
  * This class is an implementation of an AMQPReceiverController for AMQPPosition messages.
+ *
+ * @author Olivier Van Aken
  */
 public class PositionController extends AMQPReceiverController<AMQPPosition> {
     private EtaController etaController;

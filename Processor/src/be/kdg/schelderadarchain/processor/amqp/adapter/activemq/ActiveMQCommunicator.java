@@ -7,6 +7,8 @@ import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
  * This class acts as an adapter between AMQP-based ActiveMQ functionality and
  * the AMQPCommunicator interface class, separating both codebases.
  *
+ * It currently serves only as an example of the strategy pattern.
+ *
  * @author Olivier Van Aken
  */
 public final class ActiveMQCommunicator implements AMQPCommunicator {

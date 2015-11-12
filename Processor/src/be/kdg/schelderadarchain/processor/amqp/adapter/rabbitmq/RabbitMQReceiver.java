@@ -2,14 +2,16 @@ package be.kdg.schelderadarchain.processor.amqp.adapter.rabbitmq;
 
 import java.io.IOException;
 
-import be.kdg.schelderadarchain.processor.amqp.observer.AMQPReceiverConsumer;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.AMQP.BasicProperties;
 
+import org.apache.log4j.Logger;
+
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
+import be.kdg.schelderadarchain.processor.amqp.observer.AMQPReceiverConsumer;
 import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPReceiver;
 import be.kdg.schelderadarchain.processor.utility.xml.XmlUtils;
 
@@ -26,6 +28,8 @@ public class RabbitMQReceiver<T> implements AMQPReceiver<T> {
     private AMQPReceiverConsumer<T> consumer;
 
     private Class<?> type;
+
+    private final static Logger logger = Logger.getLogger(RabbitMQReceiver.class);
 
     public RabbitMQReceiver(String host, String queue, Class<?> type) {
         this.communicator = new RabbitMQCommunicator(host, queue);
@@ -68,8 +72,10 @@ public class RabbitMQReceiver<T> implements AMQPReceiver<T> {
             public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties,
                                        byte[] body) throws IOException {
                 XmlUtils<T> xmlUtils = new XmlUtils<>(RabbitMQReceiver.this.type);
-
                 T message = xmlUtils.bind(new String(body, "UTF-8"));
+
+                logger.info("Received message");
+
                 RabbitMQReceiver.this.consumer.receive(message);
                 // maybe for log: System.out.println(" [x] Received '" + message + "'");
             }

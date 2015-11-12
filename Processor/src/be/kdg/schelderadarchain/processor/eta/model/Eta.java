@@ -2,6 +2,11 @@ package be.kdg.schelderadarchain.processor.eta.model;
 
 import java.time.Duration;
 
+/**
+ * This model class represents an ETA within the processor.
+ *
+ * @author Olivier Van Aken
+ */
 public class Eta {
     private long days;
     private long hours;

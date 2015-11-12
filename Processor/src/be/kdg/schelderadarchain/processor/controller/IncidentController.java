@@ -39,7 +39,7 @@ public class IncidentController extends AMQPReceiverController<AMQPIncident> {
         this.amqpMessageService.add(incident);
         this.messageBuffer.buffer(incident);
 
-        // not implemented
+        // Incident reporting is not implemented
         // this.incidentReportController.send();
     }
 }
