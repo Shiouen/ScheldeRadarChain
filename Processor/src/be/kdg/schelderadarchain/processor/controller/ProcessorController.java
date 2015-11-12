@@ -1,7 +1,5 @@
 package be.kdg.schelderadarchain.processor.controller;
 
-import java.util.Scanner;
-
 import org.apache.log4j.Logger;
 
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
@@ -56,16 +54,5 @@ public class ProcessorController {
             logger.fatal(e.getMessage());
             System.exit(1);
         }
-    }
-
-    public static void main(String[] args) {
-        ProcessorController processorController = new ProcessorController();
-        processorController.connectCommunicators();
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Press any key to exit.");
-        scanner.nextLine();
-
-        processorController.disconnectCommunicators();
     }
 }

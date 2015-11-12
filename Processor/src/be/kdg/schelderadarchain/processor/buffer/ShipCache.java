@@ -40,7 +40,7 @@ public class ShipCache implements Buffer<Integer, Ship> {
         this.cache.put(shipId, message);
         this.logger.info(String.format("Caching Ship %s information", shipId));
 
-        this.scheduleFactory.schedule(this, shipId, BufferProperties.getInfoMessageBufferDuration());
+        this.scheduleFactory.schedule(this, shipId, BufferProperties.getShipBufferDuration());
     }
 
     @Override

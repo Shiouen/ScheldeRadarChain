@@ -38,6 +38,7 @@ public class RoughMethod implements EtaCalculationMethod {
     }
 
     private Duration calculateEta(long distanceToCover, long distanceCovered, long seconds) {
+        distanceCovered = (distanceCovered == 0) ? 1 : distanceCovered;
         return Duration.ofSeconds(distanceToCover * seconds / distanceCovered);
     }
 }
