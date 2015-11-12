@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c39107-a6b2-4cbe-8658-2277e6034c38" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\be.kdg\incidentservice-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\castor\castor-1.3.1-core.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\castor\castor-1.3.1-xml.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\castor\castor-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\castor\commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\gson\gson-2.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\rabbitmq\commons-cli-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\rabbitmq\commons-io-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\rabbitmq\hamcrest-core.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\rabbitmq\rabbitmq-client-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\lib\rabbitmq\rabbitmq-client.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\resource\mapping\mapping.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\resource\properties\amqp.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\resource\routes\1234567.csv" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\adapter\AMQPCommunicator.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\adapter\RabbitMQReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\adapter\RabbitMQSender.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\exceptions\AMQPException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\properties\AMQPProperties.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\amqp\properties\RabbitMQProperties.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\ActionReport.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\IncidentMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\IncidentStatusMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\LoadSchedule.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\PositionMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dom\Route.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dto\IncidentMessageDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\dto\IncidentStatusMessageDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\ActionReportListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\BaseGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\GeneratorException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\MessageHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\Mode.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\PositionMessageException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\RandomLoadGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\RouteLoop.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\generator\SimulationGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\utility\JsonConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\utility\RouteFileReader.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\utility\UtilityException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\be\kdg\schelderadarchain\generator\utility\XmlConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\test\be\kdg\schelderadarchain\generator\DummyActionReportListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Cas\Documents\GitHub\ScheldeRadarChain\Generator\src\test\be\kdg\schelderadarchain\generator\TestSimulationGenerator.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/Generator.iml" afterPath="$PROJECT_DIR$/Generator/Generator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/Processor.iml" afterPath="$PROJECT_DIR$/Processor/Processor.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generator/resource/properties/amqp.properties" afterPath="$PROJECT_DIR$/Generator/resource/properties/amqp.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScheldeRadarChain.iws" />
@@ -69,11 +25,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generator/resource/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="amqp.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Generator/resource/properties/amqp.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipCache.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.1910569">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="amqp.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/res/properties/amqp.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -101,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Processor/res/properties/eta.properties" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/ControlledAMQPReceiver.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/xml/XmlDataBinder.java" />
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/amqp/strategy/AMQPException.java" />
@@ -152,6 +139,7 @@
         <option value="$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/properties/BufferProperties.java" />
         <option value="$PROJECT_DIR$/Processor/test/be/kdg/schelderadarchain/processor/Processor.java" />
         <option value="$PROJECT_DIR$/Processor/test/be/kdg/schelderadarchain/processor/TestProcessor.java" />
+        <option value="$PROJECT_DIR$/Generator/resource/properties/amqp.properties" />
       </list>
     </option>
   </component>
@@ -170,10 +158,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -198,8 +186,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,126 +214,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="processor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScheldeRadarChain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -404,7 +278,7 @@
       <recent name="be.kdg.schelderadarchain.processor.buffering.utility" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestSimulationGenerator">
+  <component name="RunManager" selected="Application.TestProcessor">
     <configuration default="false" name="TestProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="be.kdg.schelderadarchain.processor.TestProcessor" />
@@ -509,74 +383,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -591,16 +397,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -646,34 +442,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -683,20 +451,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.TestProcessor" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestSimulationGenerator" />
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestSimulationGenerator" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestProcessor" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TestProcessor" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestSimulationGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -729,31 +491,31 @@
       <workItem from="1447334422514" duration="1354000" />
       <workItem from="1447335870179" duration="143000" />
       <workItem from="1447336038098" duration="587000" />
+      <workItem from="1447336935202" duration="496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203637000" />
+    <option name="totallyTimeSpent" value="204133000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252376" sideWeight="0.44947916" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3222857" sideWeight="0.5973262" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3220339" sideWeight="0.599375" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3222857" sideWeight="0.4026738" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3220339" sideWeight="0.400625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2342246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3970433" sideWeight="0.42291668" order="3" side_tool="false" content_ui="tabs" />
@@ -763,6 +525,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.45833334" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -787,6 +550,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Generator/resource/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Generator/resource/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -956,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/controller/ProcessorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -974,13 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6851852">
           <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/res/properties/amqp.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1012,11 +769,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/processor_diagram.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Generator/resource/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/res/properties/amqp.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generator/resource/properties/amqp.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/src/be/kdg/schelderadarchain/processor/buffer/ShipCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.1910569">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
