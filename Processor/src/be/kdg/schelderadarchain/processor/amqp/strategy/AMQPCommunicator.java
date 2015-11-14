@@ -1,4 +1,4 @@
-package be.kdg.schelderadarchain.processor.amqp.adapter;
+package be.kdg.schelderadarchain.processor.amqp.strategy;
 
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 

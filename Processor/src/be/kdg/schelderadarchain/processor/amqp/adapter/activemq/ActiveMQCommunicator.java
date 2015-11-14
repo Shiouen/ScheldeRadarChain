@@ -1,6 +1,6 @@
 package be.kdg.schelderadarchain.processor.amqp.adapter.activemq;
 
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPCommunicator;
+import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPCommunicator;
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 
 /**

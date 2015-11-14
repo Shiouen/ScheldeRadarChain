@@ -7,7 +7,7 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
-import be.kdg.schelderadarchain.processor.amqp.adapter.AMQPCommunicator;
+import be.kdg.schelderadarchain.processor.amqp.strategy.AMQPCommunicator;
 import be.kdg.schelderadarchain.processor.amqp.exception.AMQPException;
 
 /**
